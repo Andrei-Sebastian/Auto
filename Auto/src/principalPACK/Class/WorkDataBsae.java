@@ -1,5 +1,7 @@
 package principalPACK.Class;
 
+import javafx.scene.control.Alert;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -32,6 +34,7 @@ public class WorkDataBsae {
     }
 
     public void insert(String... args) {
+        Alert alert=new Alert(Alert.AlertType.ERROR);
         StringBuilder arg = new StringBuilder("INSERT INTO " + tableName + " VALUES( ");
         try {
             for (String argumente : args)
@@ -40,11 +43,13 @@ public class WorkDataBsae {
             statement.executeUpdate(arg.toString());
 
         } catch (SQLException e) {
-            // System.out.println(e);
+            //System.out.println(e);
+            alert.setContentText(e.toString());
+            alert.showAndWait();
             e.printStackTrace();
 
         } catch (Exception e) {
-            //System.out.println(e);
+          //  System.out.println(e);
             e.printStackTrace();
         }
     }
@@ -167,13 +172,5 @@ public class WorkDataBsae {
             return statement.executeQuery("SELECT * FROM "+tableName);
         }catch (Exception e){}
      return null;
-    }
-    public static void main(String[] args) {
-        // new WorkDataBsae("Employess","MyEmployees");
-        WorkDataBsae work = new WorkDataBsae("AutoPrincipalBase", "PieseAuto");
-        work.createDataBase();
-        work.createTable("id INT PRIMARY KEY", "marca VARCHAR(30)", "model VARCHAR(30)", "an INT", "denumire VARCHAR(60)", "pret INT");
-        work.insert("4","'BMW'","'M4'","2011","'Volan'","100");
-        work.stopConnection();
     }
 }
