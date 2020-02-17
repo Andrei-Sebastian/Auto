@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class InfoWork implements Initializable {
+public class InfoWork {
     @FXML
     Text txtInfo;
     @FXML private Pane upBar;
@@ -21,11 +21,7 @@ public class InfoWork implements Initializable {
     }
     double x=0;
     double y=0;
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        //Stage stage = (Stage) txtInfo.getScene().getWindow();
 
-    }
 
     public void barUpDragged(MouseEvent mouseEvent) {
         stage=(Stage) upBar.getScene().getWindow();

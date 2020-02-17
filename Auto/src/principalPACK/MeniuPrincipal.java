@@ -30,29 +30,27 @@ public class MeniuPrincipal  implements Initializable {
     @FXML
     private Label dateSys, lblOraStart, lblTimpMuncit;
     final static Conometru conometru =new Conometru();
-    private void clock1() throws InterruptedException {
+    private void clock1() {
         //conometru.start();
-        Thread clock = new Thread() {
-            public void run() {
-                try {
-                    for (; ; ) {
-                        Date d = new Date();
-                        SimpleDateFormat x = new SimpleDateFormat("hh:mm:ss");
-                        Platform.runLater(() -> {
-                            dateSys.setText(x.format(d));
-                            lblTimpMuncit.setText(conometru.afisTimp());
-                            if ((new Date().getHours() < 12) || (new Date().getHours() > 14))
-                                btnPauza.setDisable(true);
-                        });
-                        sleep(1000);
+        Thread clock = new Thread(() -> {
+            try {
+                while (true){
+                    Date d = new Date();
+                    SimpleDateFormat x = new SimpleDateFormat("hh:mm:ss");
+                    Platform.runLater(() -> {
+                        dateSys.setText(x.format(d));
+                        lblTimpMuncit.setText(conometru.afisTimp());
+                        if ((new Date().getHours() < 12) || (new Date().getHours() > 14))
+                            btnPauza.setDisable(true);
+                    });
+                    Thread.sleep(1000);
 
-                    }
-                } catch (InterruptedException ex) {
-                    //...
                 }
-                //Period.between(dataNaster,LocalDate.now()).getYears();
+            } catch (InterruptedException ex) {
+                //...
             }
-        };
+            //Period.between(dataNaster,LocalDate.now()).getYears();
+        });
         clock.setDaemon(true);
         clock.start();
     }
@@ -82,11 +80,7 @@ public class MeniuPrincipal  implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         lblOraStart.setText(dataStart());
-       try {
-            clock1();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        clock1();
 
     }
 
@@ -118,6 +112,18 @@ public class MeniuPrincipal  implements Initializable {
     }
 
     public void btnGarantieOnAction(ActionEvent actionEvent) {
+        FXMLLoader Loader = new FXMLLoader();
+        Loader.setLocation(getClass().getResource("garantie.fxml"));
+
+        try {
+            Loader.load();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        Stage stage = new Stage();
+        stage.setScene(new Scene(Loader.getRoot()));
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.show();
     }
 
     public void btnTerminaOnAction(ActionEvent actionEvent) {
@@ -131,7 +137,7 @@ public class MeniuPrincipal  implements Initializable {
         conometru.continua();
     }
 
-    public void btnAdaugaPieseOnAction(ActionEvent actionEvent) throws IOException {
+    public void btnAdaugaPieseOnAction(ActionEvent actionEvent)  {
         FXMLLoader Loader = new FXMLLoader();
         Loader.setLocation(getClass().getResource("adaugaPiese.fxml"));
 

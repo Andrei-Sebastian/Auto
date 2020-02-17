@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="up">
+      <change afterPath="$PROJECT_DIR$/src/principalPACK/Garantie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/principalPACK/garantie.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principalPACK/AdaugaPiese.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/AdaugaPiese.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principalPACK/Grafic/Garantie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principalPACK/Grafic/garantie.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principalPACK/InfoWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/InfoWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principalPACK/MeniuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/MeniuPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/principalPACK/adaugaPiese.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/adaugaPiese.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,11 +109,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PROGRAMARE\GitHub\Auto\Auto\src\principalPACK" />
       <recent name="D:\PROGRAMARE\Java\USV\src\principalPACK" />
       <recent name="D:\PROGRAMARE\Java\USV\src\principalPACK\GraficClass\Grafic\GraficFXML" />
       <recent name="D:\PROGRAMARE\Java\USV\src\principalPACK\Grafic" />
       <recent name="D:\PROGRAMARE\Java\USV\src" />
-      <recent name="D:\PROGRAMARE\Java\USV\src\sample\Grafic" />
     </key>
   </component>
   <component name="RunManager">
@@ -216,6 +226,14 @@
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
     </task>
+    <task id="LOCAL-00001" summary="up">
+      <created>1581932009422</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581932009422</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -224,6 +242,8 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <MESSAGE value="up" />
+    <option name="LAST_COMMIT_MESSAGE" value="up" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="72" key="#Inspections" timestamp="1581631692286">
@@ -266,10 +286,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1581465059336" />
-    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1581931955566">
+    <state x="303" y="0" key="CommitChangelistDialog2" timestamp="1581937552833">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581931955566" />
+    <state x="303" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581937552833" />
     <state x="523" y="129" key="DetectedRootsChooserDialog" timestamp="1581430158755">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -278,22 +298,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="473" y="155" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581894391328" />
-    <state width="1478" height="217" key="GridCell.Tab.0.bottom" timestamp="1581928816329">
+    <state width="1493" height="160" key="GridCell.Tab.0.bottom" timestamp="1581937401057">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="217" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581928816329" />
-    <state width="1478" height="217" key="GridCell.Tab.0.center" timestamp="1581928816328">
+    <state width="1493" height="160" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581937401057" />
+    <state width="1493" height="160" key="GridCell.Tab.0.center" timestamp="1581937401057">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="217" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581928816328" />
-    <state width="1478" height="217" key="GridCell.Tab.0.left" timestamp="1581928816328">
+    <state width="1493" height="160" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581937401057" />
+    <state width="1493" height="160" key="GridCell.Tab.0.left" timestamp="1581937401057">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="217" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581928816328" />
-    <state width="1478" height="217" key="GridCell.Tab.0.right" timestamp="1581928816328">
+    <state width="1493" height="160" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581937401057" />
+    <state width="1493" height="160" key="GridCell.Tab.0.right" timestamp="1581937401057">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="217" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581928816328" />
+    <state width="1493" height="160" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581937401057" />
     <state width="1478" height="258" key="GridCell.Tab.1.bottom" timestamp="1581909237798">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

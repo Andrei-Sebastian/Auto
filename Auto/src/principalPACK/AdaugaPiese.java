@@ -92,10 +92,7 @@ public class AdaugaPiese implements Initializable {
         tbPiese.setItems(getListPieste());
     }
 
-    public void imageAction(MouseEvent mouseEvent) throws IOException {
-        Stage stage = (Stage) anchorAddPiese.getScene().getWindow();
-        stage.close();
-    }
+
 
     public void listPieseEvent(MouseEvent mouseEvent) {
             Piesa selectedItem = tbPiese.getSelectionModel().getSelectedItem();
@@ -179,5 +176,9 @@ public class AdaugaPiese implements Initializable {
             stage.initStyle(StageStyle.UNDECORATED);
             stage.show();
 
+    }
+    public void imageAction(MouseEvent mouseEvent) {
+        Stage stage = (Stage) anchorAddPiese.getScene().getWindow();
+        stage.close();
     }
 }
