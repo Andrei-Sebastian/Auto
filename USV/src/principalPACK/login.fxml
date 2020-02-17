@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principalPACK.Login">
+   <children>
+      <ImageView fitHeight="449.0" fitWidth="800.0" layoutX="38.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@materiale/calypso.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="223.0" layoutY="51.0" opacity="0.81" prefHeight="383.0" prefWidth="354.0" style="-fx-background-color: #404040;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="60.0" layoutY="251.0" onAction="#btnIntraOnAction" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: #333333;" text="Înainte" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.46888889736599393" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#25d402" />
+                        <Stop color="#25d402" offset="0.26870229007633584" />
+                        <Stop color="#ffeb0c" offset="0.6916030534351143" />
+                        <Stop color="#c0ff08" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="186.0" layoutY="251.0" onAction="#btnIesiOnAction" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: #333333;" text="Ieși" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#d40202" />
+                        <Stop color="#d40202" offset="0.1350465335145875" />
+                        <Stop color="#ccd402" offset="0.5007633587786258" />
+                        <Stop color="#cd6f6f" offset="0.9083969465648855" />
+                        <Stop color="#cd6f6f" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <ImageView fitHeight="30.0" fitWidth="39.0" layoutX="45.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@materiale/user.png" />
+               </image>
+            </ImageView>
+            <JFXPasswordField fx:id="txtPassword" focusColor="#35f700" layoutX="84.0" layoutY="195.0" prefHeight="30.0" prefWidth="202.0" promptText="Introdu parola..." style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></JFXPasswordField>
+            <JFXTextField fx:id="txtUser" focusColor="#35f700" layoutX="84.0" layoutY="130.0" prefHeight="30.0" prefWidth="202.0" promptText="Introdu ID..." style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></JFXTextField>
+            <ImageView fitHeight="30.0" fitWidth="39.0" layoutX="45.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@materiale/key_24px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="259.0" layoutY="14.0" prefHeight="88.0" prefWidth="282.0" style="-fx-background-color: #262626;">
+         <children>
+            <Label layoutX="29.0" layoutY="26.0" text="Logare angajați" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Bookman Old Style" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
