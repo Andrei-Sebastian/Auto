@@ -5,7 +5,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane id="AnchorPane" prefHeight="444.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principalPACK.AlertBoxController">
+<AnchorPane id="AnchorPane" prefHeight="444.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principalPACK.Grafic.AlertBoxController">
    <children>
       <TextFlow fx:id="text" layoutX="141.0" layoutY="311.0" prefHeight="44.0" prefWidth="251.0">
          <children>

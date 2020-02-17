@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorAddPiese" prefHeight="459.0" prefWidth="956.0" style="-fx-background-color: #8c8c8c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principalPACK.AdaugaPiese">
+<AnchorPane fx:id="anchorAddPiese" prefHeight="459.0" prefWidth="956.0" style="-fx-background-color: #8c8c8c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principalPACK.Grafic.AdaugaPiese">
     <TableView fx:id="tbPiese" layoutX="390.0" layoutY="93.0" onMouseClicked="#listPieseEvent" prefHeight="338.0" prefWidth="551.0" style="-fx-background-color: #b3cccc;">
         <columns>
             <TableColumn fx:id="tbIDPiesa" prefWidth="77.60003662109375" resizable="false" text="ID" />
@@ -37,7 +37,7 @@
       <children>
          <ImageView accessibleRole="BUTTON" fitHeight="27.0" fitWidth="26.0" layoutX="916.0" layoutY="7.0" onMousePressed="#imageAction" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@materiale/delete_64px.png" />
+               <Image url="@../materiale/delete_64px.png" />
             </image>
             <cursor>
                <Cursor fx:constant="HAND" />
@@ -50,7 +50,7 @@
          </Label>
          <ImageView accessibleRole="BUTTON" fitHeight="27.0" fitWidth="26.0" layoutX="365.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@materiale/database_administrator_40px.png" />
+               <Image url="@../materiale/database_administrator_40px.png" />
             </image>
             <cursor>
                <Cursor fx:constant="HAND" />
@@ -58,7 +58,7 @@
          </ImageView>
          <ImageView accessibleRole="BUTTON" fitHeight="27.0" fitWidth="26.0" layoutX="880.0" layoutY="7.0" onMousePressed="#imageInfoAction" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@materiale/info_64px.png" />
+               <Image url="@../materiale/info_64px.png" />
             </image>
             <cursor>
                <Cursor fx:constant="HAND" />

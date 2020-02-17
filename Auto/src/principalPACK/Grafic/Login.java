@@ -1,4 +1,4 @@
-package principalPACK;
+package principalPACK.Grafic;
 
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -9,7 +9,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 

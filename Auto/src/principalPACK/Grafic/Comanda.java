@@ -1,4 +1,4 @@
-package principalPACK;
+package principalPACK.Grafic;
 
 
 import javafx.collections.FXCollections;

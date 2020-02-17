@@ -1,7 +1,5 @@
-package principalPACK;
+package principalPACK.Grafic;
 
-import com.jfoenix.controls.JFXButton;
-import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,7 +10,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import principalPACK.Class.Conometru;
@@ -22,7 +19,6 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
-import java.util.logging.Logger;
 
 
 public class MeniuPrincipal  implements Initializable {
