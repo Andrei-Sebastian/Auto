@@ -44,7 +44,7 @@ public class WorkDataBsae {
 
         } catch (SQLException e) {
             //System.out.println(e);
-            alert.setContentText(e.toString());
+            alert.setContentText("Exista deja acest id");
             alert.showAndWait();
             e.printStackTrace();
 
