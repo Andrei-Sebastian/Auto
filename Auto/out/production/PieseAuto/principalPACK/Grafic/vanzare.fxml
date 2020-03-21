@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="700.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principalPACK.grafic.Vanzare">
+   <children>
+      <JFXButton layoutX="14.0" layoutY="14.0" prefHeight="58.0" prefWidth="93.0" text="&lt;" />
+      <Label layoutX="610.0" layoutY="16.0" text="Alege o categorie">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField layoutX="405.0" layoutY="128.0" prefHeight="39.0" prefWidth="690.0" style="-fx-background-radius: 60;" />
+      <ScrollPane layoutX="157.0" layoutY="217.0" prefHeight="431.0" prefWidth="1160.0" AnchorPane.leftAnchor="157.0" AnchorPane.rightAnchor="158.0">
+         <content>
+            <VBox prefHeight="442.0" prefWidth="1160.0" spacing="40.0">
+               <children>
+                  <HBox prefHeight="200.0" prefWidth="1160.0" spacing="40.0">
+                     <children>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" text="Sistem de franare">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/sistemFranare.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" text="Filtre">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/filtrejpg_58ca9c0eef086.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="200.0" prefWidth="1160.0" spacing="40.0">
+                     <children>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="200.0" prefWidth="1160.0" spacing="40.0">
+                     <children>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="200.0" prefWidth="1160.0" spacing="40.0">
+                     <children>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="200.0" prefWidth="1160.0" spacing="40.0">
+                     <children>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="200.0" prefWidth="1160.0" spacing="40.0">
+                     <children>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="200.0" prefWidth="1160.0" spacing="40.0">
+                     <children>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="145.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../materiale/hiclipart.com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

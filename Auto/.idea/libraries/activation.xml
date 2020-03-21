@@ -1,0 +1,33 @@
+<component name="libraryTable">
+  <library name="activation">
+    <CLASSES>
+      <root url="jar://C:/Program Files/Java/mailactivation/activation.jar!/" />
+      <root url="jar://C:/Program Files/Java/mailactivation/mail.jar!/" />
+      <root url="jar://C:/Program Files/Java/mailactivation/techsoftemail.jar!/" />
+      <root url="file://C:/Program Files/Java" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://C:/Program Files/Java/mysql-connector-java-8.0.19/src/build/java" />
+      <root url="file://C:/Program Files/Java/mysql-connector-java-8.0.19/src/demo/java" />
+      <root url="file://C:/Program Files/Java/mysql-connector-java-8.0.19/src/generated/java" />
+      <root url="file://C:/Program Files/Java/mysql-connector-java-8.0.19/src/legacy/java" />
+      <root url="file://C:/Program Files/Java/mysql-connector-java-8.0.19/src/main/core-api/java" />
+      <root url="file://C:/Program Files/Java/mysql-connector-java-8.0.19/src/main/core-impl/java" />
+      <root url="file://C:/Program Files/Java/mysql-connector-java-8.0.19/src/main/protocol-impl/java" />
+      <root url="file://C:/Program Files/Java/mysql-connector-java-8.0.19/src/main/user-api/java" />
+      <root url="file://C:/Program Files/Java/mysql-connector-java-8.0.19/src/main/user-impl/java" />
+      <root url="file://C:/Program Files/Java/mysql-connector-java-8.0.19/src/test/java" />
+      <root url="file://C:/Program Files/Java/sqljdbc_8.2/enu/samples/adaptive" />
+      <root url="file://C:/Program Files/Java/sqljdbc_8.2/enu/samples/alwaysencrypted" />
+      <root url="file://C:/Program Files/Java/sqljdbc_8.2/enu/samples/azureactivedirectoryauthentication" />
+      <root url="file://C:/Program Files/Java/sqljdbc_8.2/enu/samples/connections" />
+      <root url="file://C:/Program Files/Java/sqljdbc_8.2/enu/samples/constrained" />
+      <root url="file://C:/Program Files/Java/sqljdbc_8.2/enu/samples/dataclassification" />
+      <root url="file://C:/Program Files/Java/sqljdbc_8.2/enu/samples/datatypes" />
+      <root url="file://C:/Program Files/Java/sqljdbc_8.2/enu/samples/resultsets" />
+      <root url="file://C:/Program Files/Java/sqljdbc_8.2/enu/samples/sparse" />
+    </SOURCES>
+    <jarDirectory url="file://C:/Program Files/Java" recursive="false" />
+  </library>
+</component>

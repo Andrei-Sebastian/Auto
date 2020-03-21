@@ -1,0 +1,8 @@
+0%EV (220 KV / 299 CP) (03.2019-...)
+0%EV (3DU) (192 KV / 261 CP) (08.2017-...)
+0%EV Performance tractiune integrala (340 KV / 460 CP) (06.2018-...)
+0%EV tractiune integrala (258 KV / 351 CP) (03.2019-...)
+1%100D AWD (310 KW / 422 CP) (06.2017-...)
+1%100D AWD (386 KW / 525 CP) (06.2017-...)
+2%100D AWD (386 KW / 525 CP) (06.2017-...)
+5%Electric (185 KW / 252 CP) (03.2008-...)

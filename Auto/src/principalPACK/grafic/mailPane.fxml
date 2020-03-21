@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<Pane fx:id="paneEmail" prefHeight="421.0" prefWidth="354.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principalPACK.grafic.MailPane">
+   <children>
+      <Pane fx:id="principalPane" layoutY="38.0" opacity="0.81" prefHeight="383.0" prefWidth="354.0" style="-fx-background-color: #404040;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="64.0" layoutY="265.0" onAction="#btnIntraOnAction" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: #333333;" text="Trimite mail" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.46888889736599393" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#0d440b00" />
+                        <Stop color="#33e20b" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="190.0" layoutY="265.0" onAction="#btnIesiOnAction" prefHeight="42.0" prefWidth="100.0" ripplerFill="#cc7070" style="-fx-background-color: #333333;" text="Inapoi" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="30.0" fitWidth="39.0" layoutX="24.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../materiale/user.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtMail" focusColor="#35f700" layoutX="63.0" layoutY="127.0" prefHeight="30.0" prefWidth="241.0" promptText="Introdu mailul..." style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <TextFlow layoutX="39.0" layoutY="167.0" prefHeight="50.0" prefWidth="276.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  Vei primi pe mail un numar de confirmare pe care il vei folosi mai apoi pentru resetarea parolei." wrappingWidth="232.3206787109375" />
+               </children>
+            </TextFlow>
+            <Text fx:id="txtTrimite" fill="#27ea4b" layoutX="139.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="titlePane" layoutX="36.0" layoutY="1.0" prefHeight="88.0" prefWidth="282.0" style="-fx-background-color: #262626;">
+         <children>
+            <Label fx:id="titleLbl" layoutX="29.0" layoutY="26.0" text="Verificare mail" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Bookman Old Style" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>
