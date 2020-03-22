@@ -96,6 +96,7 @@ public class MeniuPrincipal {
         ProfilAngajat profilAngajat=Loader.getController();
         profilAngajat.setAngajat(this.angajat);
         stage.show();
+        
     }
 }
 

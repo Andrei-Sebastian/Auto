@@ -20,8 +20,8 @@ public class ProfilAngajat implements Initializable {
     final static Conometru conometru = new Conometru();
     private static Vanzator angajat;
 
-    public void setAngajat(Vanzator angajat) {
-        this.angajat = angajat;
+    public static void setAngajat(Vanzator angajat1) {
+        angajat = angajat1;
         System.out.println(angajat.toString());
     }
 
@@ -61,7 +61,7 @@ public class ProfilAngajat implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         lblOraStart.setText(dataStart());
-        lblNume.setText(angajat.getNume()+" "+angajat.getPrenume());
+//        lblNume.setText(angajat.getNume()+" "+angajat.getPrenume());
         clock1();
 
     }

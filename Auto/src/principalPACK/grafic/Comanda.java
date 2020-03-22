@@ -45,7 +45,7 @@ public class Comanda implements Initializable {
     @FXML
     private TableColumn<Piesa, Double> tbPretPiesa, tbComandaPret;
     @FXML
-    private TableColumn<Piesa, String>  tbComandaDenumire, tbMarcaPiesa, tbModelPiesa;
+    private TableColumn<Piesa, String>  tbComandaDenumire, tbMarcaPiesa, tbModelPiesa, tbDescriere;
     @FXML
     private Label lblPret;
     @FXML
@@ -200,8 +200,7 @@ public class Comanda implements Initializable {
         tbIDPiesa.setCellValueFactory(new PropertyValueFactory<>("Id"));
         tbMarcaPiesa.setCellValueFactory(new PropertyValueFactory<>("Marca"));
         tbModelPiesa.setCellValueFactory(new PropertyValueFactory<>("Model"));
-        tbAnPiesa.setCellValueFactory(new PropertyValueFactory<>("An"));
-//        tbDenumirePiesa.setCellValueFactory(new PropertyValueFactory<>("Denumire"));
+        tbDescriere.setCellValueFactory(new PropertyValueFactory<>("Denumire"));
         tbPretPiesa.setCellValueFactory(new PropertyValueFactory<>("Pret"));
         //Comanda
         tbComandaDenumire.setCellValueFactory(new PropertyValueFactory<>("Denumire"));
@@ -215,6 +214,7 @@ public class Comanda implements Initializable {
         chCategorie.setItems(initializareChoiceBox(new ArrayList<>(mapCategoriiPiese.keySet())));
         tbPiese.setItems(filtru);//Set the table's items using the filtered list
         txtCauta.textProperty().addListener((observable, oldValue, newValue) -> {
+          //  if(txtCauta.getText().contains())
 
         });
 

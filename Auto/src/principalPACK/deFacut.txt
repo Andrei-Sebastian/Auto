@@ -1,3 +1,3 @@
-1. Comanda
-2. Adauga piese
+1. Adaugat piese
+2. Verificare piese retur
 	by Andrei

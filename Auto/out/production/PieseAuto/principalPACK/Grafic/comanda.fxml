@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -40,7 +41,7 @@
             </ImageView>
          </children>
       </Pane>
-      <TextField fx:id="txtCauta" layoutX="585.0" layoutY="145.0" prefHeight="39.0" prefWidth="478.0" promptText="Cauta..." style="-fx-background-radius: 60;">
+      <TextField fx:id="txtCauta" layoutX="585.0" layoutY="145.0" prefHeight="39.0" prefWidth="490.0" promptText="Cauta..." style="-fx-background-radius: 60;">
          <font>
             <Font size="18.0" />
          </font>
@@ -60,12 +61,12 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TableView fx:id="tbPiese" layoutX="14.0" layoutY="191.0" onMouseClicked="#listPieseEvent" prefHeight="296.0" prefWidth="1061.0">
+      <TableView fx:id="tbPiese" layoutX="14.0" layoutY="191.0" onMouseClicked="#listPieseEvent" prefHeight="476.0" prefWidth="1062.0">
         <columns>
           <TableColumn fx:id="tbIDPiesa" prefWidth="50.399991035461426" resizable="false" text="ID" />
-            <TableColumn fx:id="tbMarcaPiesa" prefWidth="208.00001525878906" text="Piesa" />
-            <TableColumn fx:id="tbModelPiesa" prefWidth="118.4000244140625" resizable="false" text="Brand" />
-            <TableColumn fx:id="tbAnPiesa" editable="false" minWidth="0.0" prefWidth="660.0" resizable="false" text="Descriere" />
+            <TableColumn fx:id="tbMarcaPiesa" prefWidth="208.00001525878906" text="Marca" />
+            <TableColumn fx:id="tbModelPiesa" prefWidth="118.4000244140625" resizable="false" text="Model" />
+            <TableColumn fx:id="tbDescriere" editable="false" minWidth="0.0" prefWidth="660.0" resizable="false" text="Descriere" />
             <TableColumn fx:id="tbPretPiesa" editable="false" minWidth="5.0" prefWidth="57.5999755859375" resizable="false" sortable="false" text="Pret" />
         </columns>
          <cursor>
@@ -77,8 +78,8 @@
       </TableView>
       <TableView fx:id="tbComanda" layoutX="1105.0" layoutY="132.0" prefHeight="414.0" prefWidth="359.0">
         <columns>
-          <TableColumn fx:id="tbComandaDenumire" editable="false" prefWidth="200.0" resizable="false" text="Denumire" />
-            <TableColumn fx:id="tbComandaPret" prefWidth="44.0" text="Pret" />
+          <TableColumn fx:id="tbComandaDenumire" editable="false" prefWidth="264.0" resizable="false" text="Denumire" />
+            <TableColumn fx:id="tbComandaPret" prefWidth="94.4000244140625" text="Pret" />
         </columns>
       </TableView>
       <Button fx:id="btnSterge" layoutX="1106.0" layoutY="556.0" mnemonicParsing="false" onAction="#btnStergeOnAction" onMouseEntered="#handleClicks" onMouseExited="#handleExited" prefHeight="31.0" prefWidth="178.0" style="-fx-background-color: #0b824e;" text="Sterge din comanda" textFill="WHITE">
@@ -106,15 +107,11 @@
       <ComboBox fx:id="chMarca11" layoutX="585.0" layoutY="102.0" onAction="#chMarcaOnAction" prefHeight="30.0" prefWidth="270.0" promptText="Selectează o versiune" style="-fx-background-radius: 20;" />
       <ComboBox fx:id="chCategorie" layoutX="14.0" layoutY="149.0" onAction="#chCategorieOnAction" prefHeight="30.0" prefWidth="265.0" promptText="Selectează categorie piesa" />
       <ComboBox fx:id="chSubcategorie" layoutX="294.0" layoutY="149.0" onAction="#chMarcaOnAction" prefHeight="30.0" prefWidth="270.0" promptText="Selectează piesa" />
-      <JFXButton layoutX="406.0" layoutY="612.0" onAction="#btnCautaOnAction" prefHeight="25.0" prefWidth="270.0" style="-fx-border-color: #000000;" text="Caută">
+      <JFXButton layoutX="865.0" layoutY="101.0" onAction="#btnCautaOnAction" prefHeight="32.0" prefWidth="209.0" style="-fx-border-color: #000000;" text="Caută">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="671.0" layoutY="608.0" onAction="#btnCautaOnAction" prefHeight="25.0" prefWidth="270.0" style="-fx-border-color: #000000;" text="Caută">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </JFXButton>
+      <Separator layoutX="2.0" layoutY="138.0" prefHeight="7.0" prefWidth="1075.0" AnchorPane.leftAnchor="2.0" />
    </children>
 </AnchorPane>
