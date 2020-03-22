@@ -2,103 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="up">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/activation.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/filename.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/categorii.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/clase/Masina.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/clase/Piesa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/clase/persoane/Cont.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/clase/persoane/Persoana.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/clase/persoane/Vanzator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/clase/preluate/Criptare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/clase/preluate/SendEmail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/clase/work/AlertType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/clase/work/GenerareCod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/deFacut.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/AlertMsg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/ArataPiesa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/CodePane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/DeFacut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/LogPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/MailPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/PasswordPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/ProfilAngajat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/arataPiesa.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/codePane.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/deFacut.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/mailPane.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/passwordPane.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/grafic/profilAngajat.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/masiniTXT/Marca.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/masiniTXT/Model.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/masiniTXT/Versiune.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/materiale/lupa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/principalPACK/subcategorii.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PieseAuto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PieseAuto.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/META-INF/PieseAuto.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/Grafic/adaugaPiese.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/grafic/adaugaPiese.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/Grafic/comanda.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/grafic/comanda.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/Grafic/garantie.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/grafic/garantie.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/Grafic/infoWork.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/Grafic/login.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/Grafic/meniuPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/grafic/meniuPrincipal.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/4wd_60px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/administrator_male_96px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/calypso.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/car_100px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/certificate_60px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/certificate_80px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/clean_48px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/database_52px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/database_administrator_40px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/delete_64px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/exit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/fundalLog.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/fundalLog1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/headlight_64px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/hiclipart.com (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/hiclipart.com.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/icons8-key-100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/icons8-user-100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/info_64px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/key_24px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/mechanic_96px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/person.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/photo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/photo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/shower_60px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/usvLogo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/vacuum_cleaner_100px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/wheel_52px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/wind_100px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PieseAuto/principalPACK/materiale/xButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Class/Conometru.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/clase/work/Conometru.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Class/Masina.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Class/Pers/Angajat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/clase/persoane/Angajat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Class/Pers/Persoana.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Class/Pers/Vanzator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/clase/persoane/Gen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Class/Piesa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Class/WorkDataBsae.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/clase/work/WorkDataBsae.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Grafic/AdaugaPiese.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/grafic/AdaugaPiese.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Grafic/Comanda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/grafic/Comanda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Grafic/Garantie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/grafic/Garantie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Grafic/InfoWork.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Grafic/Login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Grafic/MeniuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/grafic/MeniuPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Grafic/adaugaPiese.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Grafic/comanda.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Grafic/garantie.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Grafic/infoWork.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/grafic/alertMsg.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Grafic/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/grafic/logPane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Grafic/meniuPrincipal.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principalPACK/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principalPACK/materiale/add_shopping_cart_60px.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +134,7 @@
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-11.0.2\lib&quot; --add-modules=javafx.controls,jafafxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -264,7 +168,7 @@
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-11.0.2\lib&quot; --add-modules=javafx.controls,jafafxml" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
