@@ -26,8 +26,8 @@ public class PasswordPane {
 
     public void btnIntraOnAction(ActionEvent actionEvent) throws IOException {
         if(txtPassword.getText().equals(txtConfirmare.getText())){
-            WorkDataBsae db= new WorkDataBsae("AutoPrincipalBase", "angajati");
-            db.update("update angajati set password='"+ Criptare.encrypt("parolaCriptare",txtPassword.getText())+"' where id='"+Integer.parseInt(id)+"'");
+            WorkDataBsae db= new WorkDataBsae("AutoPrincipalBase", "conturi");
+            db.update("update conturi set password='"+ Criptare.encrypt("parolaCriptare",txtPassword.getText())+"' where id='"+Integer.parseInt(id)+"'");
             db.stopConnection();
         Pane paneLog= FXMLLoader.load(getClass().getResource("logPane.fxml"));
         panePassword.getChildren().setAll(paneLog);

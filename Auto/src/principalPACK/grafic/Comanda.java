@@ -41,11 +41,15 @@ public class Comanda implements Initializable {
     @FXML
     private TableView<Piesa> tbPiese, tbComanda;
     @FXML
-    private TableColumn<Piesa, Integer> tbIDPiesa, tbAnPiesa;
+    private TableColumn<Piesa, Double>  tbComandaPret;
     @FXML
-    private TableColumn<Piesa, Double> tbPretPiesa, tbComandaPret;
+    private TableColumn<Piesa, String>  tbComandaDenumire;
     @FXML
-    private TableColumn<Piesa, String>  tbComandaDenumire, tbMarcaPiesa, tbModelPiesa, tbDescriere;
+    private TableColumn<Piesa, Integer> tbIDPiesa,tbCantitatePiesa;
+    @FXML
+    private TableColumn<Piesa, Double> tbPretPiesa;
+    @FXML
+    private TableColumn<Piesa, String> tbDenumirePiesa, tbMarcaPiesa, tbModelPiesa,tbBrandPiesa,tbDescrierePiesa,tbVersiunePiesa;
     @FXML
     private Label lblPret;
     @FXML
@@ -55,7 +59,7 @@ public class Comanda implements Initializable {
     private List<Piesa> lstComanda = new ArrayList<>();
     private Double pretComanda = 0.00;
     private ObservableList<Piesa> listPiese = FXCollections.observableArrayList(getListPieste());
-    private static WorkDataBsae work;
+    private static WorkDataBsae work,workT2;
     private FilteredList<Piesa> filtru = new FilteredList(listPiese, p -> true);
     private static Map<String,List<String>> mapCategoriiPiese=populareCategorii();
     //private static final Angajat=setAngajat();
@@ -144,32 +148,56 @@ public class Comanda implements Initializable {
     }
 
     private List<Piesa> getListPieste() throws SQLException {
-        work = new WorkDataBsae("AutoPrincipalBase", "PieseAuto");
-        List<Piesa> listPiesee = new ArrayList<>();
+        work = new WorkDataBsae("AutoPrincipalBase", "piese");
+        //System.out.println("I am here");
+        List<Piesa> listPiese = new ArrayList<>();
         ResultSet rs = work.getTable();
+        workT2=new WorkDataBsae("AutoPrincipalBase", "masini");
         try {
             while (rs.next()) {
-                Piesa piesa = new Piesa();
-                piesa.setId(Integer.parseInt(rs.getString(1)));
-                piesa.setMarca(rs.getString(2));
-                piesa.setModel(rs.getString(3));
-                piesa.setAn(Integer.parseInt(rs.getString(4)));
-                piesa.setDenumire(rs.getString(5));
-                piesa.setPret(Double.parseDouble(rs.getString(6)));
-                listPiesee.add(piesa);
 
+                ResultSet rs1=workT2.getCommand("SELECT * FROM masini WHERE id_masina ="+Integer.parseInt(rs.getString(2))+"");
+                while (rs1.next()) {
+                    Piesa piesa = new Piesa(Integer.parseInt(rs.getString(1)), rs1.getString(2), rs1.getString(3), rs1.getString(4), rs.getString(3), rs.getString(4), rs.getString(5), Double.parseDouble(rs.getString(6)), Integer.parseInt(rs.getString(7)));
+                    System.out.println(piesa.toString());
+                    if(piesa.getCantitate()>0)
+                        listPiese.add(piesa);
+                }
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
-        return listPiesee;
+
+        return listPiese;
     }
 
+    private ObservableList<Piesa> getListPieste1() throws SQLException {
+        work = new WorkDataBsae("AutoPrincipalBase", "piese");
+        //System.out.println("I am here");
+        List<Piesa> listPiese = new ArrayList<>();
+        ResultSet rs = work.getTable();
+        workT2=new WorkDataBsae("AutoPrincipalBase", "masini");
+        try {
+            while (rs.next()) {
 
+                ResultSet rs1=workT2.getCommand("SELECT * FROM masini WHERE id_masina ="+Integer.parseInt(rs.getString(2))+"");
+                while (rs1.next()) {
+                    Piesa piesa = new Piesa(Integer.parseInt(rs.getString(1)), rs1.getString(2), rs1.getString(3), rs1.getString(4), rs.getString(3), rs.getString(4), rs.getString(5), Double.parseDouble(rs.getString(6)), Integer.parseInt(rs.getString(7)));
+                    System.out.println(piesa.toString());
+                    if(piesa.getCantitate()>0)
+                        listPiese.add(piesa);
+                }
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+
+        return FXCollections.observableArrayList(listPiese);
+    }
     public void onActionT(ActionEvent actionEvent) throws Exception {
         System.out.println("Apasat");
         for (Piesa x : lstComanda)
-            work.removeID(x.getId());
+            work.removeID("id",x.getId());
         AnchorPane pane = FXMLLoader.load(getClass().getResource("meniuPrincipal.fxml"));
         anchorPiese.getChildren().setAll(pane);
 
@@ -197,14 +225,19 @@ public class Comanda implements Initializable {
 
     private void setTableCell() {
         //Piese
-        tbIDPiesa.setCellValueFactory(new PropertyValueFactory<>("Id"));
+
         tbMarcaPiesa.setCellValueFactory(new PropertyValueFactory<>("Marca"));
         tbModelPiesa.setCellValueFactory(new PropertyValueFactory<>("Model"));
-        tbDescriere.setCellValueFactory(new PropertyValueFactory<>("Denumire"));
+        tbVersiunePiesa.setCellValueFactory(new PropertyValueFactory<>("Versiune"));
+        tbDenumirePiesa.setCellValueFactory(new PropertyValueFactory<>("Denumire"));
         tbPretPiesa.setCellValueFactory(new PropertyValueFactory<>("Pret"));
+        tbBrandPiesa.setCellValueFactory(new PropertyValueFactory<>("Brand"));
+        tbDescrierePiesa.setCellValueFactory(new PropertyValueFactory<>("Descriere"));
+        tbCantitatePiesa.setCellValueFactory(new PropertyValueFactory<>("Cantitate"));
         //Comanda
         tbComandaDenumire.setCellValueFactory(new PropertyValueFactory<>("Denumire"));
         tbComandaPret.setCellValueFactory(new PropertyValueFactory<>("Pret"));
+
     }
 
     @Override
@@ -236,15 +269,27 @@ public class Comanda implements Initializable {
 
     }
 
-    public void listPieseEvent(MouseEvent mouseEvent) {
+    public void listPieseEvent(MouseEvent mouseEvent) throws SQLException {
+
+
+
         if (mouseEvent.getClickCount() == 2) {
             Piesa selectedItem = tbPiese.getSelectionModel().getSelectedItem();
-            lstComanda.add(selectedItem);
-            ObservableList<Piesa> list = FXCollections.observableList(lstComanda);
-            tbComanda.setItems(list);
-            pretComanda += selectedItem.getPret();
-            lblPret.setText(String.format("%.2f", pretComanda) + " LEI");
-        }
+            int cantitate=selectedItem.getCantitate();
+            if(cantitate>0){
+                lstComanda.add(selectedItem);
+                ObservableList<Piesa> list = FXCollections.observableList(lstComanda);
+                tbComanda.setItems(list);
+                pretComanda += selectedItem.getPret();
+                lblPret.setText(String.format("%.2f", pretComanda) + " LEI");
+
+                cantitate--;
+                work.update("UPDATE piese SET cantitate_disponibila= "+cantitate +" WHERE id="+selectedItem.getIdPiesa());
+
+            System.out.println(cantitate+" "+selectedItem.getIdPiesa());
+
+                 tbPiese.setItems( getListPieste1());
+        }}
 
     }
 
@@ -264,7 +309,7 @@ public class Comanda implements Initializable {
 
     public void chOnAction(ActionEvent actionEvent) {
         try {
-            filtru.setPredicate(p -> (p.getAn() <= Integer.parseInt(chAnMare.getValue().toString())) && (p.getAn() >= Integer.parseInt(chAnMic.getValue().toString())));
+           // filtru.setPredicate(p -> (p.getAn() <= Integer.parseInt(chAnMare.getValue().toString())) && (p.getAn() >= Integer.parseInt(chAnMic.getValue().toString())));
 
 
         } catch (Exception e) {

@@ -52,13 +52,21 @@ public class WorkDataBsae {
         }
     }
 
+    public int nextID(String id) throws SQLException {
+        ResultSet rs= statement.executeQuery("SELECT MAX("+id+") FROM "+tableName);
+        if(rs.next())
+            return Integer.parseInt(rs.getString(1))+1;
+        return 0;
+    }
     public void insert(String... args) {
         Alert alert=new Alert(Alert.AlertType.INFORMATION);
         StringBuilder arg = new StringBuilder("INSERT INTO " + tableName + " VALUES( ");
         try {
             for (String argumente : args)
                 arg.append(argumente).append(", ");
+
             arg = new StringBuilder(arg.substring(0, arg.length() - 2) + ")");
+            System.out.println(arg.toString());
             statement.executeUpdate(arg.toString());
 
         } catch (SQLException e) {
@@ -101,9 +109,9 @@ public class WorkDataBsae {
         }
     }
 
-    public void removeID(int id) {
+    public void removeID(String nameID,int id) {
         try {
-            statement.executeUpdate("DELETE FROM " + tableName + " WHERE id = " + id);
+            statement.executeUpdate("DELETE FROM " + tableName + " WHERE "+nameID+" = " + id);
         } catch (SQLException e) {
             // System.out.println(e);
             e.printStackTrace();
@@ -193,4 +201,6 @@ public class WorkDataBsae {
         }catch (Exception e){e.printStackTrace();}
         return null;
     }
+
+
 }

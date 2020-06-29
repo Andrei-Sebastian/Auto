@@ -25,8 +25,6 @@ public class Login extends Application implements Initializable {
         stage.setScene(scene);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
-
-        System.out.println("Am ajuns");
     }
 
 

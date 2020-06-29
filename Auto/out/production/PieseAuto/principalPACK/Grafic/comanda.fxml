@@ -63,11 +63,14 @@
       </Label>
       <TableView fx:id="tbPiese" layoutX="14.0" layoutY="191.0" onMouseClicked="#listPieseEvent" prefHeight="476.0" prefWidth="1062.0">
         <columns>
-          <TableColumn fx:id="tbIDPiesa" prefWidth="50.399991035461426" resizable="false" text="ID" />
-            <TableColumn fx:id="tbMarcaPiesa" prefWidth="208.00001525878906" text="Marca" />
-            <TableColumn fx:id="tbModelPiesa" prefWidth="118.4000244140625" resizable="false" text="Model" />
-            <TableColumn fx:id="tbDescriere" editable="false" minWidth="0.0" prefWidth="660.0" resizable="false" text="Descriere" />
-            <TableColumn fx:id="tbPretPiesa" editable="false" minWidth="5.0" prefWidth="57.5999755859375" resizable="false" sortable="false" text="Pret" />
+            <TableColumn fx:id="tbMarcaPiesa" prefWidth="64.79998779296875" resizable="false" text="Marca" />
+            <TableColumn fx:id="tbModelPiesa" prefWidth="141.59999084472656" resizable="false" text="Model" />
+            <TableColumn fx:id="tbVersiunePiesa" prefWidth="160.800048828125" resizable="false" text="Versiune" />
+            <TableColumn fx:id="tbBrandPiesa" prefWidth="75.20001220703125" resizable="false" text="Brand" />
+            <TableColumn fx:id="tbDenumirePiesa" prefWidth="107.19992065429688" resizable="false" text="Denumire" />
+            <TableColumn fx:id="tbDescrierePiesa" editable="false" minWidth="0.0" prefWidth="345.5999755859375" resizable="false" text="Descriere" />
+            <TableColumn fx:id="tbPretPiesa" editable="false" minWidth="2.39996337890625" prefWidth="88.0" resizable="false" sortable="false" text="Pret" />
+            <TableColumn fx:id="tbCantitatePiesa" prefWidth="77.60009765625" resizable="false" text="Cantitate" />
         </columns>
          <cursor>
             <Cursor fx:constant="HAND" />

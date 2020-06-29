@@ -19,9 +19,20 @@ public class MeniuPrincipal {
     @FXML
     AnchorPane ancora;
     private static Vanzator angajat;
+    private static final int ID=1;
     public void setAngajat(Vanzator angajat)
     {
         this.angajat=angajat;
+    }
+
+    public void setID(int id)
+    {
+        this.angajat=angajat;
+    }
+
+    public int getID()
+    {
+        return ID;
     }
 
     public void onActionComanda(ActionEvent actionEvent) throws Exception {
@@ -97,6 +108,21 @@ public class MeniuPrincipal {
         profilAngajat.setAngajat(this.angajat);
         stage.show();
         
+    }
+
+    public void btnAdaugaMasinaOnAction(ActionEvent actionEvent) {
+        FXMLLoader Loader = new FXMLLoader();
+        Loader.setLocation(getClass().getResource("adaugaMasina.fxml"));
+
+        try {
+            Loader.load();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        Stage stage = new Stage();
+        stage.setScene(new Scene(Loader.getRoot()));
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.show();
     }
 }
 

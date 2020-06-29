@@ -2,6 +2,14 @@ package principalPACK.clase;
 
 public class Masina {
     String marca,model,versiune;
+    int id;
+
+    public Masina(int id,String marca, String model, String versiune) {
+        this.marca = marca;
+        this.model = model;
+        this.versiune = versiune;
+        this.id = id;
+    }
 
     public Masina(String marca, String model, String versiune) {
         this.marca = marca;
@@ -33,4 +41,11 @@ public class Masina {
         this.versiune = versiune;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

@@ -7,13 +7,16 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import principalPACK.clase.Piesa;
+import principalPACK.clase.Masina;
 import principalPACK.clase.work.WorkDataBsae;
 
 import javax.swing.*;
@@ -25,65 +28,50 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class AdaugaPiese implements Initializable {
+public class AdaugaMasina implements Initializable {
 
     @FXML
-    private TableView<Piesa> tbPiese;
+    private TableView<Masina> tbPiese;
     @FXML
-    private TableColumn<Piesa, Integer> tbIDPiesa,tbCantitatePiesa;
+    private TableColumn<Masina, Integer> tbIDPiesa;
     @FXML
-    private TableColumn<Piesa, Double> tbPretPiesa;
+    private TableColumn<Masina, String>  tbMarcaPiesa, tbModelPiesa,tbVersiunePiesa;
     @FXML
-    private TableColumn<Piesa, String> tbDenumirePiesa, tbMarcaPiesa, tbModelPiesa,tbBrandPiesa,tbDescrierePiesa,tbVersiunePiesa;
-    @FXML
-    private TextField txtID,txtMarca,txtModel,txtVersiune,txtBrand,txtDenumire,txtPret,txtCantitate,txtAdaugaCantitate;
-    @FXML
-    private TextArea txtDescriere;
+    private TextField txtID,txtMarca,txtModel,txtVersiune;
     @FXML
     Button btnActualizeaza, btnSterge,btnAdauga;
-    private static WorkDataBsae work,workT2;
-    private ObservableList<Piesa> getListPieste() throws SQLException {
-        work = new WorkDataBsae("AutoPrincipalBase", "piese");
-        //System.out.println("I am here");
-        List<Piesa> listPiese = new ArrayList<>();
+    private static WorkDataBsae work;
+    private ObservableList<Masina> getListMasini() throws SQLException {
+        work = new WorkDataBsae("AutoPrincipalBase", "masini");
+        List<Masina> listMasini = new ArrayList<>();
         ResultSet rs = work.getTable();
-        workT2=new WorkDataBsae("AutoPrincipalBase", "masini");
         try {
             while (rs.next()) {
-               System.out.println("Aici sunt");
-                ResultSet rs1=workT2.getCommand("SELECT * FROM masini WHERE id_masina ="+Integer.parseInt(rs.getString(2))+"");
-                while (rs1.next()) {
-                    Piesa piesa = new Piesa(Integer.parseInt(rs.getString(1)), rs1.getString(2), rs1.getString(3), rs1.getString(4), rs.getString(3), rs.getString(4), rs.getString(5), Double.parseDouble(rs.getString(6)), Integer.parseInt(rs.getString(7)));
-                    System.out.println(piesa.toString());
-                    listPiese.add(piesa);
-                }
+
+                    Masina masina = new Masina(Integer.parseInt(rs.getString(1)), rs.getString(2), rs.getString(3),rs.getString(4));
+                    System.out.println(masina.toString());
+                    listMasini.add(masina);
+
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
 
-        return FXCollections.observableArrayList(listPiese);
+        return FXCollections.observableArrayList(listMasini);
     }
     private void setTableCell() {
         //Piese
-
+        tbIDPiesa.setCellValueFactory(new PropertyValueFactory<>("Id"));
         tbMarcaPiesa.setCellValueFactory(new PropertyValueFactory<>("Marca"));
         tbModelPiesa.setCellValueFactory(new PropertyValueFactory<>("Model"));
         tbVersiunePiesa.setCellValueFactory(new PropertyValueFactory<>("Versiune"));
-        tbDenumirePiesa.setCellValueFactory(new PropertyValueFactory<>("Denumire"));
-        tbPretPiesa.setCellValueFactory(new PropertyValueFactory<>("Pret"));
-        tbBrandPiesa.setCellValueFactory(new PropertyValueFactory<>("Brand"));
-        tbDescrierePiesa.setCellValueFactory(new PropertyValueFactory<>("Descriere"));
-        tbCantitatePiesa.setCellValueFactory(new PropertyValueFactory<>("Cantitate"));
 
     }
     public void btnAdaugaOnAction(ActionEvent actionEvent) throws SQLException {
-        ResultSet rs=work.getCommand("SELECT id_masina FROM piese WHERE id="+txtID.getText());
-        int id_masina=1;
-        if(rs.next())
-            id_masina=Integer.parseInt(rs.getString(1));
-        work.insert(txtID.getText(),String.valueOf(id_masina),"'"+txtBrand.getText()+"'","'"+txtDenumire.getText()+"'","'"+txtDescriere.getText()+"'",txtPret.getText(),txtCantitate.getText());
-        tbPiese.setItems( getListPieste());
+        System.out.println(txtID.getText());
+        work.insert(txtID.getText(),"'"+txtMarca.getText()+"'","'"+txtModel.getText()+"'","'"+txtVersiune.getText()+"'");
+        tbPiese.setItems( getListMasini());
+        clear();
 
     }
 @FXML AnchorPane anchorAddPiese;
@@ -93,7 +81,7 @@ public class AdaugaPiese implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setTableCell();
         try {
-            tbPiese.setItems(getListPieste());
+            tbPiese.setItems(getListMasini());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -102,30 +90,26 @@ public class AdaugaPiese implements Initializable {
 
 
     public void listPieseEvent(MouseEvent mouseEvent) {
-            Piesa selectedItem = tbPiese.getSelectionModel().getSelectedItem();
-            txtID.setText(String.valueOf(selectedItem.getIdPiesa()));
+            Masina selectedItem = tbPiese.getSelectionModel().getSelectedItem();
+            txtID.setText(String.valueOf(selectedItem.getId()));
             txtModel.setText(selectedItem.getModel());
             txtMarca.setText(selectedItem.getMarca());
             txtVersiune.setText(selectedItem.getVersiune());
-            txtBrand.setText(selectedItem.getBrand());
-            txtDenumire.setText(selectedItem.getDenumire());
-            txtDescriere.setText(selectedItem.getDescriere());
-            txtPret.setText(String.valueOf(selectedItem.getPret()));
-            txtCantitate.setText(String.valueOf(selectedItem.getCantitate()));
+
 
     }
 
 
     public void btnStergeOnAction(ActionEvent actionEvent) throws SQLException {
-        work.removeID("id",Integer.parseInt(txtID.getText()));
-        tbPiese.setItems(getListPieste());
+        work.removeID("id_masina",Integer.parseInt(txtID.getText()));
+        tbPiese.setItems(getListMasini());
+        clear();
     }
 
     public void btnActualizeazaOnAction(ActionEvent actionEvent) throws SQLException {
-        int cantitete=Integer.parseInt(txtCantitate.getText())+Integer.parseInt(txtAdaugaCantitate.getText());
-
-        work.update("UPDATE piese SET cantitate_disponibila= "+cantitete+" WHERE id="+txtID.getText());
-        tbPiese.setItems(getListPieste());
+        work.update("UPDATE masini SET marca= '"+txtMarca.getText()+"',model= '"+txtModel.getText()+"', versiune= '"+txtVersiune.getText()+"' WHERE id_masina="+txtID.getText());
+        tbPiese.setItems(getListMasini());
+        clear();
     }
 
     public void handleClickss(MouseEvent mouseEvent) {
@@ -189,14 +173,8 @@ public class AdaugaPiese implements Initializable {
         txtMarca.clear();
         txtModel.clear();
         txtVersiune.clear();
-        txtCantitate.clear();
-        txtBrand.clear();
-        txtDescriere.clear();
-        txtPret.clear();
-        txtDenumire.clear();
-        txtDescriere.clear();
     }
     private String next() throws SQLException {
-        return String.valueOf(work.nextID("id"));
+        return String.valueOf(work.nextID("id_masina"));
     }
 }

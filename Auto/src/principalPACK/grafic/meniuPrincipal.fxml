@@ -175,7 +175,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="40.0" onAction="#btnAdaugaPieseOnAction" prefHeight="100.0" prefWidth="400.0" ripplerFill="#df1515" style="-fx-background-color: #2e3131;" text="ADAUGA MASINA" textFill="WHITE">
+                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="40.0" onAction="#btnAdaugaMasinaOnAction" prefHeight="100.0" prefWidth="400.0" ripplerFill="#df1515" style="-fx-background-color: #2e3131;" text="ADAUGA MASINA" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>

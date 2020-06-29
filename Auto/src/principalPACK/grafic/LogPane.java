@@ -10,8 +10,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import principalPACK.clase.persoane.Cont;
-import principalPACK.clase.persoane.Gen;
 import principalPACK.clase.persoane.Vanzator;
 import principalPACK.clase.preluate.Criptare;
 import principalPACK.clase.work.AlertType;
@@ -27,30 +25,31 @@ public class LogPane {
     TextField txtUser;
     @FXML
     PasswordField txtPassword;
-    Vanzator angajat;
+    Vanzator angajat=null;
 
     public void btnIntraOnAction(ActionEvent actionEvent) throws Exception {
         if (txtUser.getText().equals("") || txtPassword.getText().equals("")) {
             AlertMsg.start(AlertType.EMPTY);
         } else {
             try {
-                WorkDataBsae db = new WorkDataBsae("AutoPrincipalBase", "angajati");
+                WorkDataBsae db = new WorkDataBsae("AutoPrincipalBase", "conturi");
                 ResultSet result = null;
                 try {
-                    result = db.getCommand("SELECT * FROM angajati WHERE user='" + txtUser.getText() + "' && password='" + Criptare.encrypt("parolaCriptare", txtPassword.getText()) + "'");
+                    result = db.getCommand("SELECT * FROM conturi WHERE user='" + txtUser.getText() + "' && password='" + Criptare.encrypt("parolaCriptare", txtPassword.getText()) + "'");
                 } catch (Exception e) {
                     AlertMsg.start("Eroare baza de date", "Asigurati-va ca aveti baza de date in PC-ul dumneavoastra!");
                 }
 
                 if (result.next()) {
-                    angajat = new Vanzator(result.getString(2), result.getString(3), "", "1234567890123", "", Gen.M, result.getString(5), 0, new Cont(txtUser.getText(), txtPassword.getText()), result.getString(8));
+                    //angajat = new Vanzator(result.getString(2), result.getString(3), "", "1234567890123", "", Gen.M, result.getString(5), 0, new Cont(txtUser.getText(), txtPassword.getText()), result.getString(8));
+
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("meniuPrincipal.fxml"));
                     Parent root = loader.load();
                     Scene scene = new Scene(root);
                     Stage primaryStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                     primaryStage.setScene(scene);
-                    MeniuPrincipal meniuPrincipal = loader.getController();
-                    meniuPrincipal.setAngajat(angajat);
+                    //MeniuPrincipal meniuPrincipal = loader.getController();
+                    //meniuPrincipal.setAngajat(angajat);
                     primaryStage.show();
                     primaryStage.centerOnScreen();
                 } else {
@@ -68,7 +67,7 @@ public class LogPane {
         System.exit(0);
     }
 
-    private void getScena(ActionEvent actionEvent, String name) throws Exception {
+   /* private void getScena(ActionEvent actionEvent, String name) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource(name));
         Scene scene = new Scene(root);
         Stage primaryStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
@@ -77,7 +76,7 @@ public class LogPane {
         primaryStage.centerOnScreen();
         // primaryStage.setFullScreen(true);
     }
-
+*/
 
     public void hyPassOnAction(ActionEvent actionEvent) throws IOException {
         // titleLbl.setText("Resetare parola");
